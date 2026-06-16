@@ -49,6 +49,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
+  verification: {
+    google: "BanXlEMAdcE-T2tPmfcLf2LVPx6Ry3mhrySLmayz4J0",
+  },
 };
 
 export function getStructuredData() {

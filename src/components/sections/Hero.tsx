@@ -8,6 +8,7 @@ import {
   Globe,
   Shield,
   Terminal,
+  FileDown,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { scrollToSection } from "@/lib/utils";
@@ -137,6 +138,16 @@ export function Hero() {
                 onClick={() => scrollToSection("contact")}
               >
                 Contact Me
+              </Button>
+              <Button size="lg" variant="glass" asChild>
+                <a
+                  href={siteConfig.resumeUrl}
+                  download="Muhammad-Saqlain-Resume.pdf"
+                  aria-label="Download resume PDF"
+                >
+                  Download Resume
+                  <FileDown className="transition-transform group-hover:translate-y-0.5" />
+                </a>
               </Button>
             </motion.div>
 

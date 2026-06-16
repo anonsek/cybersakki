@@ -53,6 +53,7 @@ export interface SiteConfig {
   email: string;
   phone: string;
   url: string;
+  resumeUrl: string;
   intro: string;
   about: string[];
   skills: Skill[];

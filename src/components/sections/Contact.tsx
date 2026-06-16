@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Phone, CheckCircle } from "lucide-react";
+import { Send, Mail, Phone, CheckCircle, FileDown } from "lucide-react";
 import { GitHubIcon, LinkedInIcon, TikTokIcon } from "@/components/ui/social-icons";
 import { siteConfig } from "@/data/site";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -91,6 +91,16 @@ export function Contact() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   {siteConfig.phone}
+                </a>
+                <a
+                  href={siteConfig.resumeUrl}
+                  download="Muhammad-Saqlain-Resume.pdf"
+                  className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <FileDown className="h-5 w-5 text-primary" />
+                  </div>
+                  Download Resume (PDF)
                 </a>
               </div>
 

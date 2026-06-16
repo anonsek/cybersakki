@@ -12,6 +12,7 @@ export const siteConfig: SiteConfig = {
   email: "cybersakki@gmail.com",
   phone: "+923470019309",
   url: "https://muhammadsaqlain.dev",
+  resumeUrl: "/resume.pdf",
   intro:
     "I create modern, high-performance websites and secure web applications that help businesses grow online.",
   about: [
