@@ -22,6 +22,7 @@ export interface Project {
   description: string;
   tags: string[];
   gradient: string;
+  featured?: boolean;
 }
 
 export interface WorkflowStep {

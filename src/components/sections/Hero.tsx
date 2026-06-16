@@ -147,7 +147,7 @@ export function Hero() {
               className="mt-12 flex gap-8"
             >
               {[
-                { value: "3+", label: "Projects Delivered" },
+                { value: "24+", label: "Projects Delivered" },
                 { value: "14+", label: "Technologies" },
                 { value: "100%", label: "Client Focus" },
               ].map((stat) => (

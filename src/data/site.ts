@@ -1,4 +1,5 @@
 import type { SiteConfig } from "@/types";
+import { projects } from "@/data/projects";
 
 export const siteConfig: SiteConfig = {
   name: "Muhammad Saqlain",
@@ -63,35 +64,7 @@ export const siteConfig: SiteConfig = {
       icon: "Wrench",
     },
   ],
-  projects: [
-    {
-      name: "Teen Beauty",
-      url: "http://teenbeauty.com.pk/",
-      category: "Cosmetics Brand Website",
-      description:
-        "Developed a professional e-commerce platform for a cosmetics brand with modern UI, responsive design, and optimized performance.",
-      tags: ["Next.js", "E-Commerce", "Responsive", "Performance"],
-      gradient: "from-pink-500/20 via-rose-500/10 to-purple-500/20",
-    },
-    {
-      name: "Moonlight Motifs",
-      url: "https://www.moonlightmotifs.com/",
-      category: "Women's Fashion Brand",
-      description:
-        "Built an elegant fashion-focused website with premium aesthetics, mobile optimization, and enhanced user experience.",
-      tags: ["React", "Fashion", "UI/UX", "Mobile First"],
-      gradient: "from-indigo-500/20 via-violet-500/10 to-blue-500/20",
-    },
-    {
-      name: "Tools Web Pro",
-      url: "https://toolswebpro.com/",
-      category: "Online Tools Platform",
-      description:
-        "Developed a utility tools platform focused on speed, usability, and SEO optimization.",
-      tags: ["Next.js", "SEO", "Utilities", "Performance"],
-      gradient: "from-cyan-500/20 via-blue-500/10 to-teal-500/20",
-    },
-  ],
+  projects,
   workflow: [
     {
       step: 1,
