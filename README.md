@@ -10,7 +10,7 @@ Built with a modern SaaS-inspired design, dark cyber-blue aesthetics, and a focu
 
 This repository contains the source code for a high-conversion developer portfolio showcasing skills, services, featured client projects, and a contact workflow. The site is fully static, optimized for Core Web Vitals, and structured for easy content updates without touching component logic.
 
-**Live site:** [muhammadsaqlain.dev](https://muhammadsaqlain.dev) *(update after deployment)*
+**Live site:** [cybersakki.vercel.app](https://cybersakki.vercel.app)
 
 ---
 
@@ -160,7 +160,7 @@ export const siteConfig: SiteConfig = {
   name: "Muhammad Saqlain",
   email: "cybersakki@gmail.com",
   phone: "+923470019309",
-  url: "https://muhammadsaqlain.dev",   // Update to your production domain
+  url: "https://cybersakki.vercel.app",   // Update to your production domain
   skills: [...],
   services: [...],
   projects: [...],
