@@ -103,17 +103,7 @@ body {
   @apply mx-auto max-w-7xl w-full;
 }
 
-@media (pointer: fine) {
-  body.custom-cursor-active {
-    cursor: none;
-  }
 
-  body.custom-cursor-active a,
-  body.custom-cursor-active button,
-  body.custom-cursor-active [role="button"] {
-    cursor: none;
-  }
-}
 
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.4; }
