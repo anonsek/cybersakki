@@ -55,7 +55,7 @@ export function Navbar() {
             <Shield className="h-5 w-5 text-primary" />
           </div>
           <span className="hidden font-semibold sm:block">
-            {siteConfig.name.split(" ")[0]}
+            cybersakki
             <span className="text-primary">.</span>
           </span>
         </button>

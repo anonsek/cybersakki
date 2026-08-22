@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   education: "BS Computer Science",
   email: "cybersakki@gmail.com",
   phone: "+923470019309",
-  url: "https://muhammadsaqlain.dev",
+  url: "https://cybersakki.vercel.app",
   resumeUrl: "/resume.pdf",
   intro:
     "I create modern, high-performance websites and secure web applications that help businesses grow online.",
