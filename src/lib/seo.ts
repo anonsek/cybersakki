@@ -52,10 +52,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
   },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   verification: {
     google: "BanXlEMAdcE-T2tPmfcLf2LVPx6Ry3mhrySLmayz4J0",
   },
 };
+
 
 export function constructMetadata({
   title,
