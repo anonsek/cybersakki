@@ -24,6 +24,7 @@ export type ProjectCategory = (typeof projectCategories)[number];
 
 export const projects: Project[] = [
   {
+    slug: "teen-beauty",
     name: "Teen Beauty",
     url: "http://teenbeauty.com.pk/",
     category: "E-Commerce",
@@ -32,8 +33,18 @@ export const projects: Project[] = [
     tags: ["Next.js", "E-Commerce", "Responsive", "Performance"],
     gradient: gradients[0],
     featured: true,
+    challenge:
+      "Developing a high-speed e-commerce interface capable of displaying vast beauty catalog items on mobile devices with smooth product rendering.",
+    solution:
+      "Built a Next.js frontend with dynamic routing, optimized image compression, fast client-side state transitions, and responsive cart interaction.",
+    keyHighlights: [
+      "Sub-second page load times with Next.js image optimization",
+      "Mobile-first checkout and product browsing UI",
+      "Clean semantic markup for e-commerce search visibility",
+    ],
   },
   {
+    slug: "moonlight-motifs",
     name: "Moonlight Motifs",
     url: "https://www.moonlightmotifs.com/",
     category: "Business",
@@ -42,8 +53,18 @@ export const projects: Project[] = [
     tags: ["React", "Fashion", "UI/UX", "Mobile First"],
     gradient: gradients[1],
     featured: true,
+    challenge:
+      "Balancing high-resolution visual lookbooks with fast page loading speeds and fluid mobile layout rendering.",
+    solution:
+      "Designed a sleek React interface using modular UI components, lazy-loaded visual media, and smooth micro-animations.",
+    keyHighlights: [
+      "Fluid micro-animations with minimal JS overhead",
+      "Mobile-first responsive typography and touch targets",
+      "Structured OpenGraph metadata for social sharing",
+    ],
   },
   {
+    slug: "tools-web-pro",
     name: "Tools Web Pro",
     url: "https://toolswebpro.com/",
     category: "Tools",
@@ -52,8 +73,18 @@ export const projects: Project[] = [
     tags: ["Next.js", "SEO", "Utilities", "Performance"],
     gradient: gradients[2],
     featured: true,
+    challenge:
+      "Building a suite of client-side web utilities (image compression, PDF converters, SEO analyzers) while maintaining exceptional Google Lighthouse performance scores.",
+    solution:
+      "Implemented a modular Next.js App Router architecture where each utility runs efficiently in-browser with zero server bottleneck.",
+    keyHighlights: [
+      "100/100 Google Lighthouse SEO score",
+      "20+ client-side web utilities running with zero server delay",
+      "Dynamic XML sitemap indexing every tool page",
+    ],
   },
   {
+    slug: "learnofy",
     name: "Learnofy",
     url: "https://github.com/anonsek/learnofy",
     category: "Web App",
@@ -61,186 +92,34 @@ export const projects: Project[] = [
       "Modern learning platform built with TypeScript for delivering structured educational content and interactive experiences.",
     tags: ["TypeScript", "Web App", "Education", "React"],
     gradient: gradients[3],
+    challenge:
+      "Designing an intuitive web application state management flow for interactive course navigation and user progress tracking.",
+    solution:
+      "Leveraged TypeScript type safety and React component state architecture to provide seamless course interaction.",
+    keyHighlights: [
+      "Strict TypeScript interfaces for state predictability",
+      "Accessible interactive course layout",
+      "Clean modular code structure for rapid maintenance",
+    ],
   },
   {
+    slug: "cybersakki-portfolio",
     name: "Cybersakki Portfolio",
-    url: "https://github.com/anonsek/cybersakki",
+    url: "https://cybersakki.vercel.app",
     category: "Business",
     description:
       "Production-ready developer portfolio with dark cyber theme, animations, SEO optimization, and responsive design.",
     tags: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
     gradient: gradients[4],
-  },
-  {
-    name: "Car Parking System",
-    url: "https://github.com/anonsek/car-parking",
-    category: "Web App",
-    description:
-      "Frontend for a smart car parking management website with booking interface and responsive layout.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
-    gradient: gradients[5],
-  },
-  {
-    name: "Automation Bot",
-    url: "https://github.com/anonsek/bot",
-    category: "Web App",
-    description:
-      "JavaScript automation bot for streamlining repetitive web tasks and workflow integrations.",
-    tags: ["JavaScript", "Automation", "Node.js", "Bot"],
-    gradient: gradients[6],
-  },
-  {
-    name: "PDF Tools Suite",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Online PDF conversion and manipulation tools with fast processing and clean user interface.",
-    tags: ["PDF", "Converter", "Utilities", "SEO"],
-    gradient: gradients[7],
-  },
-  {
-    name: "Image Compressor",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Lightweight image compression tool that reduces file size while maintaining visual quality.",
-    tags: ["Image", "Compression", "Performance", "Web Tool"],
-    gradient: gradients[0],
-  },
-  {
-    name: "QR Code Generator",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Instant QR code generator for URLs, text, and contact info with downloadable output formats.",
-    tags: ["QR Code", "Generator", "Utilities", "Free Tool"],
-    gradient: gradients[1],
-  },
-  {
-    name: "Password Generator",
-    url: "https://toolswebpro.com/",
-    category: "Security",
-    description:
-      "Secure password generator with customizable length, symbols, and entropy options.",
-    tags: ["Security", "Password", "Generator", "Privacy"],
-    gradient: gradients[2],
-  },
-  {
-    name: "JSON Formatter",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Developer-friendly JSON formatter and validator with syntax highlighting and error detection.",
-    tags: ["JSON", "Developer", "Formatter", "Validation"],
-    gradient: gradients[3],
-  },
-  {
-    name: "SEO Meta Analyzer",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "SEO meta tag analyzer that inspects titles, descriptions, and Open Graph data for any URL.",
-    tags: ["SEO", "Analyzer", "Meta Tags", "Marketing"],
-    gradient: gradients[4],
-  },
-  {
-    name: "Base64 Encoder/Decoder",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Fast Base64 encode and decode utility for developers working with data encoding tasks.",
-    tags: ["Base64", "Encoder", "Developer", "Utilities"],
-    gradient: gradients[5],
-  },
-  {
-    name: "Word Counter Pro",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Advanced word and character counter with reading time estimates for content creators.",
-    tags: ["Word Counter", "Content", "Writing", "Analytics"],
-    gradient: gradients[6],
-  },
-  {
-    name: "Color Palette Generator",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Interactive color palette generator for designers with hex, RGB, and copy-to-clipboard support.",
-    tags: ["Design", "Colors", "UI/UX", "Generator"],
-    gradient: gradients[7],
-  },
-  {
-    name: "Hash Generator",
-    url: "https://toolswebpro.com/",
-    category: "Security",
-    description:
-      "Cryptographic hash generator supporting MD5, SHA-256, and other algorithms for developers.",
-    tags: ["Hash", "Security", "Cryptography", "Developer"],
-    gradient: gradients[0],
-  },
-  {
-    name: "SSL Certificate Checker",
-    url: "https://toolswebpro.com/",
-    category: "Security",
-    description:
-      "Web security tool that validates SSL certificates, expiry dates, and HTTPS configuration.",
-    tags: ["SSL", "Security", "HTTPS", "Audit"],
-    gradient: gradients[1],
-  },
-  {
-    name: "Website Speed Analyzer",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Performance analysis tool measuring page load metrics and optimization opportunities.",
-    tags: ["Performance", "Speed", "Lighthouse", "Audit"],
-    gradient: gradients[2],
-  },
-  {
-    name: "Meta Tag Generator",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "SEO meta tag generator for creating optimized title, description, and social preview tags.",
-    tags: ["SEO", "Meta Tags", "Open Graph", "Marketing"],
-    gradient: gradients[3],
-  },
-  {
-    name: "IP Address Lookup",
-    url: "https://toolswebpro.com/",
-    category: "Security",
-    description:
-      "Network utility for IP geolocation, ISP lookup, and basic network information retrieval.",
-    tags: ["IP Lookup", "Network", "Security", "Utilities"],
-    gradient: gradients[4],
-  },
-  {
-    name: "WHOIS Domain Lookup",
-    url: "https://toolswebpro.com/",
-    category: "Security",
-    description:
-      "Domain WHOIS lookup tool for checking registration details, expiry, and DNS information.",
-    tags: ["WHOIS", "Domain", "DNS", "Security"],
-    gradient: gradients[5],
-  },
-  {
-    name: "Text Case Converter",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "Multi-format text case converter supporting uppercase, lowercase, title case, and camelCase.",
-    tags: ["Text", "Converter", "Utilities", "Developer"],
-    gradient: gradients[6],
-  },
-  {
-    name: "URL Encoder/Decoder",
-    url: "https://toolswebpro.com/",
-    category: "Tools",
-    description:
-      "URL encoding and decoding utility for handling special characters in web applications.",
-    tags: ["URL", "Encoder", "Developer", "Web"],
-    gradient: gradients[7],
+    challenge:
+      "Creating a high-performance personal brand portfolio that combines rich visual animations with maximum SEO indexability.",
+    solution:
+      "Engineered with Next.js 16, Tailwind CSS v4, dynamic JSON-LD schemas, breadcrumb navigation, and multi-page routing.",
+    keyHighlights: [
+      "Next.js App Router multi-page SEO architecture",
+      "Comprehensive Person, WebSite, & Service JSON-LD schemas",
+      "100% Core Web Vitals optimization",
+    ],
   },
 ];
 

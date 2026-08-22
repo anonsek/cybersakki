@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
+import type { Service, Project, BlogPost, BreadcrumbItem, FAQItem } from "@/types";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -11,16 +12,18 @@ export const metadata: Metadata = {
   keywords: [
     "Muhammad Saqlain",
     "Full Stack Web Developer",
-    "Web Security",
+    "Web Security Specialist",
     "Next.js Developer",
     "React Developer",
-    "Web Penetration Testing",
-    "Portfolio",
+    "TypeScript Specialist",
     "Custom Website Development",
     "E-Commerce Development",
+    "Technical SEO",
+    "Web Security Assessment",
   ],
-  authors: [{ name: siteConfig.name }],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
+  publisher: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,10 +57,53 @@ export const metadata: Metadata = {
   },
 };
 
-export function getStructuredData() {
+export function constructMetadata({
+  title,
+  description,
+  path = "",
+  keywords = [],
+}: {
+  title: string;
+  description: string;
+  path?: string;
+  keywords?: string[];
+}): Metadata {
+  const url = `${siteConfig.url}${path}`;
+  return {
+    title,
+    description,
+    keywords: [
+      ...keywords,
+      "Muhammad Saqlain",
+      "Full Stack Web Developer",
+      "Next.js",
+      "React",
+      "Web Security",
+    ],
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      siteName: siteConfig.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      creator: "@cybersakki",
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
+
+export function getPersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${siteConfig.url}/#person`,
     name: siteConfig.name,
     jobTitle: siteConfig.role,
     description: siteConfig.description,
@@ -70,15 +116,116 @@ export function getStructuredData() {
     },
     knowsAbout: [
       "Web Development",
-      "Full Stack Development",
-      "Cybersecurity",
+      "Full Stack Web Development",
       "Next.js",
       "React",
       "TypeScript",
       "Web Security",
+      "Technical SEO",
     ],
     sameAs: siteConfig.socials
       .filter((s) => s.url.startsWith("http"))
       .map((s) => s.url),
   };
 }
+
+export function getWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
+    url: siteConfig.url,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    publisher: {
+      "@id": `${siteConfig.url}/#person`,
+    },
+  };
+}
+
+export function getServiceSchema(service: Service) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.fullTitle,
+    serviceType: service.title,
+    description: service.metaDescription,
+    provider: {
+      "@type": "Person",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    url: `${siteConfig.url}/services/${service.slug}`,
+    areaServed: "Global",
+  };
+}
+
+export function getFAQSchema(faqs: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      item: `${siteConfig.url}${item.href}`,
+    })),
+  };
+}
+
+export function getCaseStudySchema(project: Project) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.name,
+    description: project.description,
+    author: {
+      "@type": "Person",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    url: `${siteConfig.url}/projects/${project.slug}`,
+    keywords: project.tags.join(", "),
+  };
+}
+
+export function getBlogPostingSchema(post: BlogPost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.metaDescription,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: siteConfig.url,
+    },
+    datePublished: post.publishedAt,
+    url: `${siteConfig.url}/blog/${post.slug}`,
+    publisher: {
+      "@type": "Person",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  };
+}
+
+export function getStructuredData() {
+  return [getPersonSchema(), getWebSiteSchema()];
+}
+

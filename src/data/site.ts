@@ -1,101 +1,74 @@
 import type { SiteConfig } from "@/types";
 import { projects } from "@/data/projects";
+import { services } from "@/data/services";
 
 export const siteConfig: SiteConfig = {
   name: "Muhammad Saqlain",
-  title: "Muhammad Saqlain | Full Stack Web Developer & Web Security Enthusiast",
+  title: "Muhammad Saqlain | Full Stack Web Developer & Web Security Specialist",
   description:
-    "Muhammad Saqlain is a Full Stack Web Developer and Web Security Enthusiast specializing in fast, secure, and modern web experiences. View projects and get in touch.",
-  tagline: "Building Fast, Secure & Modern Web Experiences",
-  role: "Full Stack Web Developer & Web Security Enthusiast",
+    "Muhammad Saqlain is a Full Stack Web Developer and Web Security Specialist creating ultra-fast, secure, and modern web applications with Next.js, React, and TypeScript.",
+  tagline: "Building Fast, Secure & Modern Web Applications",
+  role: "Full Stack Web Developer & Web Security Specialist",
   education: "BS Computer Science",
   email: "cybersakki@gmail.com",
   phone: "+923470019309",
   url: "https://cybersakki.vercel.app",
   resumeUrl: "/resume.pdf",
   intro:
-    "I create modern, high-performance websites and secure web applications that help businesses grow online.",
+    "I engineer high-performance business websites, scalable React/Next.js web applications, and security-hardened digital platforms that help companies grow online.",
   about: [
     "Muhammad Saqlain is a BS Computer Science graduate passionate about building scalable web applications, modern business websites, and improving web security.",
-    "He combines frontend excellence, backend development, and security-focused thinking to create fast, reliable, and secure digital experiences.",
+    "He combines frontend excellence with React and Next.js, full-stack API development, and security-focused testing to create fast, reliable, and secure web experiences.",
   ],
   skills: [
-    { name: "Next.js", level: 92, category: "frontend" },
-    { name: "React.js", level: 90, category: "frontend" },
-    { name: "JavaScript", level: 93, category: "frontend" },
-    { name: "TypeScript", level: 88, category: "frontend" },
+    { name: "Next.js", level: 95, category: "frontend" },
+    { name: "React.js", level: 92, category: "frontend" },
+    { name: "JavaScript", level: 94, category: "frontend" },
+    { name: "TypeScript", level: 90, category: "frontend" },
     { name: "Tailwind CSS", level: 95, category: "frontend" },
+    { name: "Node.js", level: 86, category: "backend" },
+    { name: "REST APIs", level: 88, category: "backend" },
     { name: "Git", level: 85, category: "tools" },
     { name: "GitHub", level: 88, category: "tools" },
-    { name: "Web Development", level: 92, category: "frontend" },
-    { name: "Responsive Design", level: 94, category: "frontend" },
-    { name: "REST APIs", level: 87, category: "backend" },
-    { name: "Kali Linux", level: 78, category: "security" },
-    { name: "Web Penetration Testing", level: 75, category: "security" },
-    { name: "SEO Optimization", level: 90, category: "tools" },
-    { name: "Performance Optimization", level: 91, category: "tools" },
+    { name: "Web Development", level: 95, category: "frontend" },
+    { name: "Responsive Design", level: 95, category: "frontend" },
+    { name: "Kali Linux", level: 80, category: "security" },
+    { name: "Web Security Review", level: 78, category: "security" },
+    { name: "Technical SEO", level: 92, category: "tools" },
+    { name: "Core Web Vitals", level: 94, category: "tools" },
   ],
-  services: [
-    {
-      title: "Custom Website Development",
-      description:
-        "Modern business websites, landing pages, and company portals.",
-      icon: "Globe",
-    },
-    {
-      title: "E-Commerce Development",
-      description:
-        "Online stores optimized for conversion and performance.",
-      icon: "ShoppingCart",
-    },
-    {
-      title: "Web Application Development",
-      description: "Scalable web apps using modern technologies.",
-      icon: "Code2",
-    },
-    {
-      title: "Website Security Assessment",
-      description:
-        "Basic web security reviews and vulnerability identification.",
-      icon: "Shield",
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing updates, monitoring, and optimization.",
-      icon: "Wrench",
-    },
-  ],
+  services,
   projects,
   workflow: [
     {
       step: 1,
-      title: "Requirement Gathering",
-      description: "Understanding your goals, audience, and project scope.",
+      title: "Requirement & Architecture Planning",
+      description: "Understanding business goals, target audience, technical scope, and SEO objectives.",
     },
     {
       step: 2,
-      title: "UI/UX Planning",
-      description: "Designing wireframes and user-focused interfaces.",
+      title: "UI/UX & Mobile First Design",
+      description: "Crafting wireframes and responsive interfaces optimized for conversion.",
     },
     {
       step: 3,
-      title: "Development",
-      description: "Building with clean, scalable, modern code.",
+      title: "Clean Next.js & React Codebase",
+      description: "Engineering scalable frontend and backend code with strict TypeScript safety.",
     },
     {
       step: 4,
-      title: "Security Testing",
-      description: "Reviewing for vulnerabilities and best practices.",
+      title: "Security & Vulnerability Review",
+      description: "Auditing headers, input handling, and security best practices.",
     },
     {
       step: 5,
-      title: "Deployment",
-      description: "Launching with optimized performance and SEO.",
+      title: "Technical SEO & Speed Launch",
+      description: "Optimizing Core Web Vitals, JSON-LD schemas, and launching with zero downtime.",
     },
     {
       step: 6,
-      title: "Maintenance & Support",
-      description: "Ongoing updates, monitoring, and improvements.",
+      title: "Ongoing Maintenance & Growth",
+      description: "Monitoring performance, security updates, and continuous platform improvements.",
     },
   ],
   features: [
@@ -165,11 +138,11 @@ export const siteConfig: SiteConfig = {
 };
 
 export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
 ];
+

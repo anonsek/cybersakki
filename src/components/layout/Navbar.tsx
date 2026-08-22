@@ -1,38 +1,45 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Shield } from "lucide-react";
-import { navItems, siteConfig } from "@/data/site";
+import { navItems } from "@/data/site";
 import { cn, scrollToSection } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = navItems.map((item) => item.href.replace("#", ""));
-      for (const section of sections.reverse()) {
-        const el = document.getElementById(section);
-        if (el && el.getBoundingClientRect().top <= 150) {
-          setActiveSection(section);
-          break;
+      if (pathname === "/") {
+        const sections = ["home", "about", "services", "projects", "contact"];
+        for (const section of sections.reverse()) {
+          const el = document.getElementById(section);
+          if (el && el.getBoundingClientRect().top <= 150) {
+            setActiveSection(section);
+            break;
+          }
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   const handleNavClick = (href: string) => {
-    scrollToSection(href.replace("#", ""));
     setIsOpen(false);
+    if (href.startsWith("/#") && pathname === "/") {
+      scrollToSection(href.replace("/#", ""));
+    }
   };
 
   return (
@@ -46,10 +53,10 @@ export function Navbar() {
       )}
     >
       <nav className="container-custom flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <button
-          onClick={() => handleNavClick("#home")}
+        <Link
+          href="/"
           className="group flex items-center gap-2"
-          aria-label="Go to home"
+          aria-label="Cybersakki home"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
             <Shield className="h-5 w-5 text-primary" />
@@ -58,23 +65,28 @@ export function Navbar() {
             cybersakki
             <span className="text-primary">.</span>
           </span>
-        </button>
+        </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
-            const id = item.href.replace("#", "");
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href)) ||
+              (pathname === "/" && activeSection && item.href === `/#${activeSection}`);
+
             return (
               <li key={item.href}>
-                <button
+                <Link
+                  href={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-lg",
-                    activeSection === id
-                      ? "text-primary"
+                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-lg block",
+                    isActive
+                      ? "text-primary font-semibold"
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  {activeSection === id && (
+                  {isActive && (
                     <motion.div
                       layoutId="activeNav"
                       className="absolute inset-0 rounded-lg bg-primary/10 border border-primary/20"
@@ -82,18 +94,17 @@ export function Navbar() {
                     />
                   )}
                   <span className="relative z-10">{item.label}</span>
-                </button>
+                </Link>
               </li>
             );
           })}
         </ul>
 
         <div className="hidden lg:block">
-          <Button
-            onClick={() => handleNavClick("#contact")}
-            size="sm"
-          >
-            Hire Me
+          <Button asChild size="sm">
+            <Link href="/#contact" onClick={() => handleNavClick("/#contact")}>
+              Hire Me
+            </Link>
           </Button>
         </div>
 
@@ -118,20 +129,20 @@ export function Navbar() {
             <ul className="flex flex-col gap-1 p-4">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <button
+                  <Link
+                    href={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="w-full rounded-lg px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="w-full rounded-lg px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors block"
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
               <li className="pt-2">
-                <Button
-                  onClick={() => handleNavClick("#contact")}
-                  className="w-full"
-                >
-                  Hire Me
+                <Button asChild className="w-full">
+                  <Link href="/#contact" onClick={() => handleNavClick("/#contact")}>
+                    Hire Me
+                  </Link>
                 </Button>
               </li>
             </ul>

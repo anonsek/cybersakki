@@ -9,13 +9,26 @@ export interface Skill {
   category: "frontend" | "backend" | "security" | "tools";
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface Service {
+  slug: string;
   title: string;
+  fullTitle: string;
   description: string;
+  metaDescription: string;
   icon: string;
+  longDescription: string[];
+  keyFeatures: string[];
+  techStack: string[];
+  faqs: FAQItem[];
 }
 
 export interface Project {
+  slug: string;
   name: string;
   url: string;
   category: string;
@@ -23,6 +36,28 @@ export interface Project {
   tags: string[];
   gradient: string;
   featured?: boolean;
+  challenge?: string;
+  solution?: string;
+  keyHighlights?: string[];
+  results?: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  metaDescription: string;
+  publishedAt: string;
+  readTime: string;
+  author: string;
+  category: string;
+  tags: string[];
+  content: string[];
+}
+
+export interface BreadcrumbItem {
+  label: string;
+  href: string;
 }
 
 export interface WorkflowStep {
@@ -63,3 +98,4 @@ export interface SiteConfig {
   features: Feature[];
   socials: SocialLink[];
 }
+

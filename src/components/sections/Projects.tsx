@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, ArrowUpRight } from "lucide-react";
+import { ExternalLink, ArrowUpRight, BookOpen } from "lucide-react";
 import { GitHubIcon } from "@/components/ui/social-icons";
 import {
   projects,
@@ -59,14 +60,23 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           </span>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 transition-opacity group-hover:opacity-100">
-          <ArrowUpRight className="h-8 w-8 text-primary" />
-        </div>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="absolute inset-0 flex items-center justify-center bg-background/60 opacity-0 transition-opacity group-hover:opacity-100"
+          aria-label={`View ${project.name} Case Study`}
+        >
+          <div className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground">
+            <BookOpen className="h-4 w-4" />
+            <span>Read Case Study</span>
+          </div>
+        </Link>
       </div>
 
       <div className="flex flex-1 flex-col p-5">
         <h3 className="mb-2 text-lg font-bold group-hover:text-primary transition-colors">
-          {project.name}
+          <Link href={`/projects/${project.slug}`}>
+            {project.name}
+          </Link>
         </h3>
         <p className="mb-4 flex-1 text-sm text-muted-foreground leading-relaxed line-clamp-3">
           {project.description}
@@ -80,26 +90,34 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           ))}
         </div>
 
-        <Button variant="outline" className="w-full group/btn" size="sm" asChild>
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Visit ${project.name}`}
-          >
-            {isGitHub ? (
-              <>
-                View on GitHub
-                <GitHubIcon className="h-4 w-4 transition-transform group-hover/btn:scale-110" />
-              </>
-            ) : (
-              <>
-                Live Website
-                <ExternalLink className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-              </>
-            )}
-          </a>
-        </Button>
+        <div className="grid grid-cols-2 gap-2">
+          <Button variant="outline" className="w-full text-xs" size="sm" asChild>
+            <Link href={`/projects/${project.slug}`}>
+              Case Study
+            </Link>
+          </Button>
+
+          <Button variant="glass" className="w-full text-xs group/btn" size="sm" asChild>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${project.name}`}
+            >
+              {isGitHub ? (
+                <>
+                  GitHub
+                  <GitHubIcon className="h-3.5 w-3.5 ml-1 transition-transform group-hover/btn:scale-110" />
+                </>
+              ) : (
+                <>
+                  Live Site
+                  <ExternalLink className="h-3.5 w-3.5 ml-1 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                </>
+              )}
+            </a>
+          </Button>
+        </div>
       </div>
     </motion.article>
   );
@@ -164,7 +182,7 @@ export function Projects() {
           >
             <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {visibleProjects.map((project) => (
-                <StaggerItem key={project.name}>
+                <StaggerItem key={project.slug}>
                   <ProjectCard project={project} />
                 </StaggerItem>
               ))}
