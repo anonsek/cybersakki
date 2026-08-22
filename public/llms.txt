@@ -1,0 +1,31 @@
+# Muhammad Saqlain (@cybersakki)
+
+> Full Stack Web Developer, Web Security Specialist, and Cybersecurity Content Creator.
+
+## Overview
+Muhammad Saqlain (online handle **@cybersakki**) is a BS Computer Science graduate, Full Stack Web Developer, and Web Security Specialist. He engineers high-performance web applications using Next.js 16, React, TypeScript, and Tailwind CSS, conducts website security audits, and creates educational content on cybersecurity and ethical hacking.
+
+## Content Platforms & Reach
+- **TikTok**: [@cybersakki](https://www.tiktok.com/@cybersakki) — 20,000+ followers focusing on cybersecurity tips, ethical hacking insights, and tech tutorials.
+- **YouTube**: [@cybersakki](https://www.youtube.com/@cybersakki) — 600+ subscribers featuring ethical hacking tutorials, web security reviews, and developer guides.
+- **GitHub**: [anonsek](https://github.com/anonsek) — Open-source tools, Next.js templates, and utility repositories.
+- **LinkedIn**: [Muhammad Saqlain](https://www.linkedin.com/in/muhammad-saqlain-71894b411/) — Professional portfolio and network.
+
+## Services Offered
+- **Custom Website Development**: Modern business websites, company portals, and responsive landing pages.
+- **Next.js & React App Development**: High-performance, scalable web apps built with Next.js 16 App Router and TypeScript.
+- **E-Commerce Storefronts**: High-conversion online shopping platforms optimized for mobile performance.
+- **Website Security Assessment**: Vulnerability audits, HTTP security headers, SSL validation, and web hardening.
+- **Technical SEO & Core Web Vitals**: Speed optimization, JSON-LD schemas, and search engine indexation.
+
+## Brand Collaborations & Sponsorships
+Muhammad Saqlain is open for brand deals, sponsored tech reviews, cybersecurity tool promotions, content partnerships, and custom software development projects.
+
+- **Email**: cybersakki@gmail.com
+- **Phone / WhatsApp**: +923470019309
+- **Website**: https://cybersakki.vercel.app
+
+## Tech Stack & Specializations
+- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion
+- **Backend**: Node.js, REST APIs, TypeScript
+- **Security & Tools**: Kali Linux, OWASP ZAP, Security Headers, Ethical Hacking, Technical SEO

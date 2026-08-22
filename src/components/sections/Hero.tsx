@@ -158,15 +158,16 @@ export function Hero() {
               className="mt-12 flex gap-8"
             >
               {[
-                { value: "24+", label: "Projects Delivered" },
-                { value: "14+", label: "Technologies" },
-                { value: "100%", label: "Client Focus" },
+                { value: "24+", label: "Projects Built" },
+                { value: "20k+", label: "TikTok Followers" },
+                { value: "600+", label: "YouTube Subs" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-2xl font-bold text-gradient">{stat.value}</p>
                   <p className="text-xs text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
+
             </motion.div>
           </div>
 

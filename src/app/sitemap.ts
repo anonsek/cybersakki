@@ -34,6 +34,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/llms.txt`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/llms-full.txt`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+
   ];
 
   // Dynamic Service routes

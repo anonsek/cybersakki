@@ -15,10 +15,11 @@ export const siteConfig: SiteConfig = {
   url: "https://cybersakki.vercel.app",
   resumeUrl: "/resume.pdf",
   intro:
-    "I engineer high-performance business websites, scalable React/Next.js web applications, and security-hardened digital platforms that help companies grow online.",
+    "I engineer high-performance business websites, scalable React/Next.js web applications, and security-hardened digital platforms. Also a Cybersecurity Content Creator on TikTok (@cybersakki, 20k+ followers) and YouTube (600+ subscribers) sharing ethical hacking and tech tutorials.",
   about: [
-    "Muhammad Saqlain is a BS Computer Science graduate passionate about building scalable web applications, modern business websites, and improving web security.",
-    "He combines frontend excellence with React and Next.js, full-stack API development, and security-focused testing to create fast, reliable, and secure web experiences.",
+    "Muhammad Saqlain is a BS Computer Science graduate, Full Stack Web Developer, and Web Security Specialist.",
+    "As an active tech content creator with over 20k followers on TikTok (@cybersakki) and 600+ YouTube subscribers, he teaches cybersecurity, ethical hacking, and modern web development.",
+    "Open for web development projects, security audits, technical consulting, brand collaborations, and tech sponsorships.",
   ],
   skills: [
     { name: "Next.js", level: 95, category: "frontend" },
@@ -33,7 +34,8 @@ export const siteConfig: SiteConfig = {
     { name: "Web Development", level: 95, category: "frontend" },
     { name: "Responsive Design", level: 95, category: "frontend" },
     { name: "Kali Linux", level: 80, category: "security" },
-    { name: "Web Security Review", level: 78, category: "security" },
+    { name: "Ethical Hacking", level: 82, category: "security" },
+    { name: "Web Security Review", level: 80, category: "security" },
     { name: "Technical SEO", level: 92, category: "tools" },
     { name: "Core Web Vitals", level: 94, category: "tools" },
   ],
@@ -115,6 +117,16 @@ export const siteConfig: SiteConfig = {
   ],
   socials: [
     {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@cybersakki",
+      icon: "Tiktok",
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@cybersakki",
+      icon: "Youtube",
+    },
+    {
       name: "GitHub",
       url: "https://github.com/anonsek",
       icon: "Github",
@@ -125,17 +137,13 @@ export const siteConfig: SiteConfig = {
       icon: "Linkedin",
     },
     {
-      name: "TikTok",
-      url: "https://www.tiktok.com/@cybersakki",
-      icon: "Tiktok",
-    },
-    {
       name: "Email",
       url: "mailto:cybersakki@gmail.com",
       icon: "Mail",
     },
   ],
 };
+
 
 export const navItems = [
   { label: "Home", href: "/" },
