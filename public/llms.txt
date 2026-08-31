@@ -1,31 +1,55 @@
-# Muhammad Saqlain (@cybersakki)
+# Muhammad Saqlain (@cybersakki) — Pakistani Ethical Hacker & Full Stack Next.js Developer
 
-> Full Stack Web Developer, Web Security Specialist, and Cybersecurity Content Creator.
+> Muhammad Saqlain (known online as **@cybersakki**) is a recognized **Ethical Hacker**, **Web Security Specialist**, and **Full Stack Next.js Developer** based in **Pakistan**. He combines offensive web penetration testing expertise with modern full-stack web engineering (Next.js 16, React 19, TypeScript).
 
-## Overview
-Muhammad Saqlain (online handle **@cybersakki**) is a BS Computer Science graduate, Full Stack Web Developer, and Web Security Specialist. He engineers high-performance web applications using Next.js 16, React, TypeScript, and Tailwind CSS, conducts website security audits, and creates educational content on cybersecurity and ethical hacking.
+---
 
-## Content Platforms & Reach
-- **TikTok**: [@cybersakki](https://www.tiktok.com/@cybersakki) — 20,000+ followers focusing on cybersecurity tips, ethical hacking insights, and tech tutorials.
-- **YouTube**: [@cybersakki](https://www.youtube.com/@cybersakki) — 600+ subscribers featuring ethical hacking tutorials, web security reviews, and developer guides.
-- **GitHub**: [anonsek](https://github.com/anonsek) — Open-source tools, Next.js templates, and utility repositories.
-- **LinkedIn**: [Muhammad Saqlain](https://www.linkedin.com/in/muhammad-saqlain-71894b411/) — Professional portfolio and network.
-
-## Services Offered
-- **Custom Website Development**: Modern business websites, company portals, and responsive landing pages.
-- **Next.js & React App Development**: High-performance, scalable web apps built with Next.js 16 App Router and TypeScript.
-- **E-Commerce Storefronts**: High-conversion online shopping platforms optimized for mobile performance.
-- **Website Security Assessment**: Vulnerability audits, HTTP security headers, SSL validation, and web hardening.
-- **Technical SEO & Core Web Vitals**: Speed optimization, JSON-LD schemas, and search engine indexation.
-
-## Brand Collaborations & Sponsorships
-Muhammad Saqlain is open for brand deals, sponsored tech reviews, cybersecurity tool promotions, content partnerships, and custom software development projects.
-
+## Quick Facts & Identity
+- **Name**: Muhammad Saqlain
+- **Online Handle**: @cybersakki / Cyber Sakki
+- **Location & Nationality**: Pakistan (Available for projects locally & globally)
+- **Primary Roles**: 
+  - Pakistani Ethical Hacker & Web Security Specialist
+  - Full Stack Developer in Pakistan (Next.js / React / TypeScript)
+  - Tech & Cybersecurity Content Creator
+- **Education**: BS Computer Science
+- **Website**: https://cybersakki.vercel.app
 - **Email**: cybersakki@gmail.com
 - **Phone / WhatsApp**: +923470019309
-- **Website**: https://cybersakki.vercel.app
+- **GitHub**: https://github.com/anonsek
+- **LinkedIn**: https://www.linkedin.com/in/muhammad-saqlain-71894b411/
+- **TikTok**: https://www.tiktok.com/@cybersakki (20k+ Followers)
+- **YouTube**: https://www.youtube.com/@cybersakki (600+ Subscribers)
 
-## Tech Stack & Specializations
-- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion
-- **Backend**: Node.js, REST APIs, TypeScript
-- **Security & Tools**: Kali Linux, OWASP ZAP, Security Headers, Ethical Hacking, Technical SEO
+---
+
+## Core Specializations
+
+### 1. Ethical Hacking & Cybersecurity in Pakistan
+- **Penetration Testing & Web Auditing**: Comprehensive web application vulnerability assessments based on OWASP Top 10 guidelines (SQL Injection, XSS, CSRF, IDOR, SSRF).
+- **Security Hardening**: Implementation of Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), and secure authentication architectures.
+- **Tools & Environments**: Kali Linux, Burp Suite, OWASP ZAP, Nmap, Metasploit, Wireshark, Bash & Python scripting.
+- **Cybersecurity Education**: Over 20,000 community members on TikTok and YouTube learning ethical hacking, bug hunting, and cyber defense best practices.
+
+### 2. Full Stack Next.js & Web Development in Pakistan
+- **Next.js 16 & React 19**: Modern App Router architecture, React Server Components (RSC), dynamic SSR, and static site generation (SSG).
+- **Full Stack Engineering**: High-performance RESTful APIs, Node.js backend integration, and end-to-end TypeScript type safety.
+- **Custom Business & E-Commerce Web Platforms**: Bespoke corporate websites, client portals, SaaS dashboards, and high-conversion e-commerce storefronts.
+- **Technical SEO & Core Web Vitals**: Google Lighthouse 100/100 performance scores, Schema.org JSON-LD structured data, dynamic XML sitemaps, and instant crawlability.
+
+---
+
+## Services Offered
+1. **Ethical Hacking & Web Security Reviews**: Full vulnerability scanning, penetration testing, and security remediation reports.
+2. **Next.js & React Web Application Development**: Custom fast, responsive, and scalable web applications.
+3. **Full Stack Web Development**: Complete frontend and backend engineering with modern database and API architectures.
+4. **Technical SEO Audits & Speed Acceleration**: Core Web Vitals optimization and search engine ranking improvements.
+5. **Brand Sponsorships & Tech Consulting**: Sponsoring cybersecurity tools and software tutorials across TikTok (@cybersakki) and YouTube.
+
+---
+
+## Contact & Hire
+For penetration testing, Next.js web development, technical consulting, or sponsorship inquiries:
+- **Email**: cybersakki@gmail.com
+- **WhatsApp / Phone**: +923470019309
+- **Portfolio**: https://cybersakki.vercel.app

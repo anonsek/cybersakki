@@ -6,26 +6,40 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name} - Pakistani Ethical Hacker & Full Stack Developer`,
   },
   description: siteConfig.description,
   keywords: [
     "Muhammad Saqlain",
+    "cybersakki",
+    "Cyber Sakki",
+    "Ethical hacker in Pakistan",
+    "Pakistani Ethical Hacker",
+    "Ethical Hacking Pakistan",
+    "Top Ethical Hacker in Pakistan",
+    "Cybersecurity Expert in Pakistan",
+    "Penetration Tester Pakistan",
+    "Web Security Specialist in Pakistan",
+    "Next.js Developer in Pakistan",
+    "Pakistani Next.js Developer",
+    "Full Stack Developer in Pakistan",
+    "Pakistani Full Stack Developer",
+    "React Developer Pakistan",
     "Full Stack Web Developer",
     "Web Security Specialist",
     "Next.js Developer",
     "React Developer",
     "TypeScript Specialist",
     "Custom Website Development",
-    "E-Commerce Development",
-    "Technical SEO",
+    "Vulnerability Assessment Pakistan",
+    "Technical SEO Pakistan",
     "Web Security Assessment",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   openGraph: {
-    type: "website",
+    type: "profile",
     locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.title,
@@ -81,10 +95,16 @@ export function constructMetadata({
     keywords: [
       ...keywords,
       "Muhammad Saqlain",
+      "cybersakki",
+      "Ethical hacker in Pakistan",
+      "Pakistani Ethical Hacker",
+      "Next.js Developer in Pakistan",
+      "Full Stack Developer in Pakistan",
       "Full Stack Web Developer",
       "Next.js",
       "React",
       "Web Security",
+      "Penetration Testing",
     ],
     openGraph: {
       title,
@@ -111,23 +131,55 @@ export function getPersonSchema() {
     "@type": "Person",
     "@id": `${siteConfig.url}/#person`,
     name: siteConfig.name,
-    jobTitle: siteConfig.role,
-    description: siteConfig.description,
+    alternateName: ["cybersakki", "Cyber Sakki", "Muhammad Saqlain (@cybersakki)"],
+    jobTitle: [
+      "Ethical Hacker",
+      "Full Stack Next.js Developer",
+      "Web Security Specialist",
+      "Cybersecurity Content Creator",
+    ],
+    description:
+      "Muhammad Saqlain (@cybersakki) is an Ethical Hacker and Full Stack Next.js Developer based in Pakistan, specializing in penetration testing, web security reviews, high-performance Next.js web applications, and technical SEO.",
     url: siteConfig.url,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    nationality: {
+      "@type": "Country",
+      name: "Pakistan",
+    },
+    homeLocation: {
+      "@type": "Country",
+      name: "Pakistan",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "PK",
+      addressRegion: "Pakistan",
+    },
     alumniOf: {
       "@type": "EducationalOrganization",
       name: siteConfig.education,
     },
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Ethical Hacker & Full Stack Web Developer",
+      occupationalCategory: "15-1254.00",
+      skills: "Ethical Hacking, Penetration Testing, Next.js, React, TypeScript, Web Security Auditing, Technical SEO",
+    },
     knowsAbout: [
-      "Web Development",
-      "Full Stack Web Development",
+      "Ethical Hacking",
+      "Cybersecurity",
+      "Penetration Testing",
+      "Vulnerability Assessment",
+      "OWASP Top 10",
+      "Kali Linux",
+      "Web Application Security",
       "Next.js",
       "React",
       "TypeScript",
-      "Web Security",
+      "Full Stack Web Development",
       "Technical SEO",
+      "Core Web Vitals",
     ],
     sameAs: siteConfig.socials
       .filter((s) => s.url.startsWith("http"))
@@ -231,7 +283,22 @@ export function getBlogPostingSchema(post: BlogPost) {
   };
 }
 
-export function getStructuredData() {
-  return [getPersonSchema(), getWebSiteSchema()];
+export function getProfilePageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${siteConfig.url}/#profilepage`,
+    url: siteConfig.url,
+    name: "Muhammad Saqlain (@cybersakki) - Pakistani Ethical Hacker & Full Stack Next.js Developer",
+    description: siteConfig.description,
+    mainEntity: {
+      "@id": `${siteConfig.url}/#person`,
+    },
+  };
 }
+
+export function getStructuredData() {
+  return [getPersonSchema(), getWebSiteSchema(), getProfilePageSchema()];
+}
+
 

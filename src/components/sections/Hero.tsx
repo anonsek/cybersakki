@@ -61,7 +61,7 @@ export function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
               <span className="text-sm text-primary font-medium">
-                Available for Projects
+                Available for Projects • Pakistan & Global
               </span>
             </motion.div>
 
@@ -71,7 +71,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="mb-2 font-mono text-sm text-primary"
             >
-              {siteConfig.education}
+              {siteConfig.education} • Pakistan
             </motion.p>
 
             <motion.h1

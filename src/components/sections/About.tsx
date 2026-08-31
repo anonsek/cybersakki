@@ -10,22 +10,22 @@ const highlights = [
   {
     icon: GraduationCap,
     title: siteConfig.education,
-    description: "Strong foundation in computer science principles",
-  },
-  {
-    icon: Code2,
-    title: "Full Stack Development",
-    description: "End-to-end web application expertise",
+    description: "BS Computer Science Graduate based in Pakistan",
   },
   {
     icon: Shield,
-    title: "Security Mindset",
-    description: "Security-first approach to every project",
+    title: "Ethical Hacking & Security",
+    description: "OWASP vulnerability audits & penetration testing",
+  },
+  {
+    icon: Code2,
+    title: "Full Stack Next.js",
+    description: "Next.js 16, React 19, TypeScript & Node.js",
   },
   {
     icon: Lock,
-    title: "Reliable Solutions",
-    description: "Fast, secure, and scalable digital products",
+    title: "Reliable & Scalable",
+    description: "Fast, security-hardened digital solutions",
   },
 ];
 
