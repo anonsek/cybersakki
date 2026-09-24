@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:resume": "node scripts/generate-resume.mjs"
+    "generate:resume": "node scripts/generate-resume.mjs",
+    "generate:og": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "@radix-ui/react-label": "2.1.10",

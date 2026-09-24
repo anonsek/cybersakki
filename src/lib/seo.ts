@@ -45,12 +45,22 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Saqlain (@cybersakki) - Ethical Hacker & Full Stack Next.js Developer in Pakistan",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
     creator: "@cybersakki",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -81,14 +91,20 @@ export function constructMetadata({
   title,
   description,
   path = "",
+  image = "/og-image.png",
   keywords = [],
 }: {
   title: string;
   description: string;
   path?: string;
+  image?: string;
   keywords?: string[];
 }): Metadata {
   const url = `${siteConfig.url}${path}`;
+  const ogImage = image.startsWith("http")
+    ? image
+    : `${siteConfig.url}${image.startsWith("/") ? "" : "/"}${image}`;
+
   return {
     title,
     description,
@@ -112,12 +128,22 @@ export function constructMetadata({
       url,
       type: "website",
       siteName: siteConfig.name,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
       creator: "@cybersakki",
+      images: [ogImage],
     },
     alternates: {
       canonical: url,
@@ -131,6 +157,7 @@ export function getPersonSchema() {
     "@type": "Person",
     "@id": `${siteConfig.url}/#person`,
     name: siteConfig.name,
+    image: `${siteConfig.url}/og-image.png`,
     alternateName: ["cybersakki", "Cyber Sakki", "Muhammad Saqlain (@cybersakki)"],
     jobTitle: [
       "Ethical Hacker",
