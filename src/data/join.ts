@@ -26,7 +26,6 @@ export const linktreeItems: LinktreeItem[] = [
   {
     id: "virtual-number",
     title: "Virtual Number",
-    subtitle: "getotp.net referl cybersakki",
     url: "https://getotp.net/register.php?ref=cybersakki",
     icon: "Globe",
     accentColor: "#00b4ff",
