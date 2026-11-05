@@ -86,7 +86,7 @@ export interface SiteConfig {
   role: string;
   education: string;
   email: string;
-  phone: string;
+  phone?: string;
   url: string;
   resumeUrl: string;
   intro: string;

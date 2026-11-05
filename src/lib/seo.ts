@@ -169,7 +169,6 @@ export function getPersonSchema() {
       "Muhammad Saqlain (@cybersakki) is an Ethical Hacker and Full Stack Next.js Developer based in Pakistan, specializing in penetration testing, web security reviews, high-performance Next.js web applications, and technical SEO.",
     url: siteConfig.url,
     email: siteConfig.email,
-    telephone: siteConfig.phone,
     nationality: {
       "@type": "Country",
       name: "Pakistan",

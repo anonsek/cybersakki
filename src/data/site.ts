@@ -11,7 +11,6 @@ export const siteConfig: SiteConfig = {
   role: "Ethical Hacker & Full Stack Next.js Developer in Pakistan",
   education: "BS Computer Science",
   email: "cybersakki@gmail.com",
-  phone: "+923470019309",
   url: "https://cybersakki.vercel.app",
   resumeUrl: "/resume.pdf",
   intro:
@@ -119,14 +118,29 @@ export const siteConfig: SiteConfig = {
   ],
   socials: [
     {
-      name: "TikTok",
-      url: "https://www.tiktok.com/@cybersakki",
-      icon: "Tiktok",
-    },
-    {
       name: "YouTube",
       url: "https://www.youtube.com/@cybersakki",
       icon: "Youtube",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/cybersakki",
+      icon: "Instagram",
+    },
+    {
+      name: "Snapchat",
+      url: "https://www.snapchat.com/add/cybersakki",
+      icon: "Snapchat",
+    },
+    {
+      name: "WhatsApp Channel",
+      url: "https://whatsapp.com/channel/0029Vb3hYI8KQuJO5T6XbX1L",
+      icon: "Whatsapp",
+    },
+    {
+      name: "TikTok",
+      url: "https://www.tiktok.com/@cybersakki",
+      icon: "Tiktok",
     },
     {
       name: "GitHub",
@@ -153,6 +167,7 @@ export const navItems = [
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Blog", href: "/blog" },
+  { label: "Join", href: "/join" },
   { label: "Contact", href: "/#contact" },
 ];
 
