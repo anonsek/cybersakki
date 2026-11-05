@@ -46,7 +46,7 @@ export default function JoinPage() {
         "https://www.youtube.com/@cybersakki",
         "https://www.instagram.com/cybersakki",
         "https://www.snapchat.com/add/cybersakki",
-        "https://whatsapp.com/channel/0029Vb3hYI8KQuJO5T6XbX1L",
+        "https://whatsapp.com/channel/0029VbCQ23d3GJP77sVv2Y3L",
         "https://www.tiktok.com/@cybersakki",
         "https://github.com/anonsek",
         "https://www.linkedin.com/in/muhammad-saqlain-71894b411/",

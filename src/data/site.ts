@@ -134,7 +134,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "WhatsApp Channel",
-      url: "https://whatsapp.com/channel/0029Vb3hYI8KQuJO5T6XbX1L",
+      url: "https://whatsapp.com/channel/0029VbCQ23d3GJP77sVv2Y3L",
       icon: "Whatsapp",
     },
     {

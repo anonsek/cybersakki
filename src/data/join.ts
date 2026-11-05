@@ -59,7 +59,7 @@ export const linktreeItems: LinktreeItem[] = [
     id: "whatsapp-channel",
     title: "WhatsApp Channel",
     subtitle: "@cybersakki",
-    url: "https://whatsapp.com/channel/0029Vb3hYI8KQuJO5T6XbX1L",
+    url: "https://whatsapp.com/channel/0029VbCQ23d3GJP77sVv2Y3L",
     icon: "Whatsapp",
     accentColor: "#22c55e",
     badge: "Official",
