@@ -12,7 +12,7 @@ import {
   SnapchatIcon,
   WhatsAppIcon,
 } from "@/components/ui/social-icons";
-import { joinProfile, linktreeItems, type LinktreeItem } from "@/data/join";
+import { linktreeItems, type LinktreeItem } from "@/data/join";
 
 const iconMap = {
   Youtube: YouTubeIcon,
@@ -28,31 +28,19 @@ const iconMap = {
 
 export function JoinHub() {
   return (
-    <div className="relative mx-auto max-w-md px-4 pt-16 sm:pt-20 pb-12">
+    <div className="relative mx-auto max-w-md px-4 pt-20 sm:pt-24 pb-12">
       {/* Ambient background glow */}
       <div
         className="pointer-events-none absolute top-10 left-1/2 -translate-x-1/2 h-56 w-56 rounded-full bg-primary/15 blur-[80px] -z-10"
         aria-hidden="true"
       />
 
-      {/* Header - Just cybersakki */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="text-center"
-      >
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground font-mono">
-          {joinProfile.title}
-        </h1>
-      </motion.div>
-
       {/* Link List */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.05 }}
-        className="mt-4 sm:mt-5 space-y-2.5"
+        transition={{ duration: 0.3 }}
+        className="space-y-2.5"
       >
         {linktreeItems.map((item: LinktreeItem, idx: number) => {
           const Icon = iconMap[item.icon] || Globe;

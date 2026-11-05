@@ -61,7 +61,7 @@ export function Navbar() {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
             <Shield className="h-5 w-5 text-primary" />
           </div>
-          <span className="hidden font-semibold sm:block">
+          <span className="hidden font-bold sm:block text-lg">
             cybersakki
             <span className="text-primary">.</span>
           </span>
@@ -71,7 +71,7 @@ export function Navbar() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:hidden pointer-events-auto">
           <Link
             href="/"
-            className="font-semibold text-foreground text-base tracking-tight"
+            className="font-bold text-foreground text-lg sm:text-xl tracking-tight"
             aria-label="Cybersakki home"
           >
             cybersakki<span className="text-primary">.</span>
