@@ -49,10 +49,10 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "glass-strong py-3 shadow-lg shadow-black/20" : "py-5"
+        scrolled ? "glass-strong py-2.5 sm:py-3 shadow-lg shadow-black/20" : "py-3 sm:py-5"
       )}
     >
-      <nav className="container-custom flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="relative container-custom flex items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
           className="group flex items-center gap-2"
@@ -66,6 +66,17 @@ export function Navbar() {
             <span className="text-primary">.</span>
           </span>
         </Link>
+
+        {/* Mobile centered cybersakki */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:hidden pointer-events-auto">
+          <Link
+            href="/"
+            className="font-semibold text-foreground text-base tracking-tight"
+            aria-label="Cybersakki home"
+          >
+            cybersakki<span className="text-primary">.</span>
+          </Link>
+        </div>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
